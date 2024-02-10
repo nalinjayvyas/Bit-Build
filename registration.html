@@ -3,90 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration Form</title>
+    <title>Registration Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        form {
-            max-width: 400px;
-            margin: 0 auto;
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
         }
 
-        input {
+        input[type="text"],
+        select {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
         }
 
         button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    
-    <h2>User Registration Form</h2>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <input type="text" id="branch" name="branch" required>
+            </div>
+            <div class="form-group">
+                <label for="semester">Semester</label>
+                <input type="text" id="semester" name="semester" required>
+            </div>
+            <div class="form-group">
+                <label for="event">Event you wish to participate</label>
+                <input type="text" id="event" name="event" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone no:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-    <form id="registrationForm" onsubmit="validateForm(); return false;">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="id">ID:</label>
-        <input type="text" id="id" name="id" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-
-        <label for="branch">Branch:</label>
-        <input type="text" id="branch" name="branch" required>
-
-        <label for="year">Year of Passing:</label>
-        <input type="number" id="year" name="year" min="1900" max="2100" required>
-
-        <button type="submit">Register</button>
-    </form>
-    <py-script src="main.py">
-    </py-script>
     <script>
-        function validateForm() {
-            // Basic validation example
-            var name = document.getElementById('name').value;
-            var id = document.getElementById('id').value;
-            var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
-            var branch = document.getElementById('branch').value;
-            var year = document.getElementById('year').value;
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
 
-            if (!name || !id || !email || !phone || !branch || !year) {
-                alert('All fields are required');
-                return;
+            // You can add form validation or submission logic here
+            // For demonstration purposes, you can log the form data to the console
+            var formData = new FormData(this);
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
             }
 
-            // Additional validation logic can be added here
-
-            // If validation passes, you can send the data to a server or perform other actions
-            alert('Registration successful!');
-        }
+            // Here you can send the form data to the server using AJAX or any other method
+            // Example using fetch API:
+            // fetch('submit_registration.php', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => response.text())
+            // .then(data => console.log(data))
+            // .catch(error => console.error('Error:', error));
+        });
     </script>
-
 </body>
 </html>

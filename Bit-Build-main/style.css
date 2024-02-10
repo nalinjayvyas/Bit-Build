@@ -1,0 +1,233 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+}
+
+/* Home Section Styles */
+.home {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.home .content {
+    margin-bottom: 30px;
+}
+
+.home .content h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.home .content span {
+    color: #ffd700;
+}
+
+.home .btn {
+    background-color: #ffd700;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.home .btn:hover {
+    background-color: #ffbb00;
+}
+
+/* Event Slider Styles */
+.event-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.event-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.event-form:hover {
+    transform: translateY(-10px);
+}
+
+.event-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event-form p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Selected Event Dropdown Styles */
+.selected-event-dropdown {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.selected-event-dropdown h2 {
+    margin-bottom: 10px;
+}
+
+/* Font Awesome Styles */
+.fas {
+    font-size: 20px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    #menu-bars {
+        display: block;
+        cursor: pointer;
+    }
+}
+.selected-event-dropdown {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the dropdown */
+}
+
+.selected-event-dropdown .event-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.selected-event-dropdown h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.selected-event-dropdown p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+.event-form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px; /* Set a fixed height for all event forms */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.event-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-form p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Style for the "Show More Events" button */
+#more-events-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#more-events-btn:hover {
+    background-color: #0056b3;
+}
+.register-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-button button {
+    padding: 10px 20px;
+    background-color: #ff6600; /* Orange color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-button button:hover {
+    background-color: #e65c00; /* Darker shade of orange on hover */
+}

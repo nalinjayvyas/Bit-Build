@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organizer Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>e</span>vento</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#service">Service</a>
+            <a href="#about">About</a>
+            <a href="./gallery/gallery.html">Gallery</a>
+            <a href="#price">Price</a>
+            <a href="#review">Review</a>
+            <a href ="calendar/test.html">Calendar</a>
+            <a href="#contact">Contact</a>
+            <a href="./login.html">Login</a>
+        </nav>
+        <div id="menu-bars" class="fas fa-bars"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>It's time to celebrate! The best <span> event organizers</span></h3>
+            <a href="#" class="btn">Contact Us</a>
+        </div>
+
+        <div class="event-slider">
+          <div class="event-form" data-venue="Main Conference Hall, ABC Convention Center" data-date="February 20, 2024" data-time="10:00 AM - 2:00 PM" data-fees="$50 per person">
+                <h2>Event: Tech Talk - Future of Artificial Intelligence</h2>
+                <p>Description: Join us for an insightful discussion on the future of artificial intelligence. Learn about the latest advancements, potential applications, and ethical considerations in AI technology. Our expert panelists will share their expertise and engage in a Q&A session with the audience.</p>
+            </div>
+            <div class="event-form" data-venue="Community Center" data-date="March 15, 2024" data-time="3:00 PM - 6:00 PM" data-fees="Free admission">
+                <h2>Event: Yoga and Meditation Retreat</h2>
+                <p>Description: Take a break from your busy schedule and immerse yourself in a rejuvenating yoga and meditation retreat. Connect with your inner self, reduce stress, and enhance your overall well-being through guided yoga sessions, mindfulness practices, and serene nature walks. Suitable for beginners and experienced practitioners alike.</p>
+            </div>
+            <div class="event-form" data-venue="Italian Cooking School" data-date="April 10, 2024" data-time="6:00 PM - 9:00 PM" data-fees="$75 per person">
+                <h2>Event: Cooking Workshop - Italian Cuisine</h2>
+                <p>Description: Indulge your taste buds in a culinary journey through Italy with our hands-on cooking workshop. Learn the art of preparing authentic Italian dishes from scratch, including classic pasta recipes, flavorful sauces, and delectable desserts. Our experienced chef will guide you through each step, and you'll get to enjoy the delicious creations at the end of the workshop.</p>
+            </div>
+            <div class="event-form" data-venue="Italian Cooking School" data-date="April 10, 2024" data-time="6:00 PM - 9:00 PM" data-fees="$75 per person">
+                <h2>Event: Photography Tour - Urban Landscapes</h2>
+                <p>Description: Embark on a photography adventure through the vibrant urban landscapes of our city. Capture stunning architecture, bustling streets, and hidden gems as you explore iconic landmarks and off-the-beaten-path locations. Whether you're a beginner or an experienced photographer, this tour offers plenty of opportunities to sharpen your skills and unleash your creativity.</p>
+            </div>
+            <!-- Add more event forms as needed -->
+        </div>
+        <button id="more-events-btn">Show More Events</button>
+    </section>
+
+    <div class="selected-event-dropdown">
+     
+        
+          <h2>Selected Event:</h2>
+          <div id="selected-event-info">
+   
+          </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

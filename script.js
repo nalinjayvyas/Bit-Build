@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var eventForms = document.querySelectorAll('.event-form');
     var selectedEventInfo = document.getElementById('selected-event-info');
 
+
     eventForms.forEach(function(form) {
         form.addEventListener('click', function(event) {
             event.preventDefault();
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>Time: ${time}</p>
                     <p>Fees: ${fees}</p>
                 <div class="register-button">
-                    <button>Register Now</button>
+                    <a href="./registration.html"><button>Register Now</button></a>
     </div>
                 </div>
             `;
